@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        app:elevation="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/colToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|enterAlways"
+            android:theme="?attr/actionBarTheme" >
+
+            <TextView
+                android:id="@+id/transaction_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_round_arrow_down"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/white"
+                android:fontFamily="@font/barlow_semibold"
+                android:text="All Transaction"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginEnd="30dp"
+                android:background="#00FFFFFF"
+                android:contentDescription="Filter button"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                android:src="@drawable/ic_filter"
+                 />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:background="#00FFFFFF"
+                android:contentDescription="Search button"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                android:src="@drawable/ic_search"
+                app:tint="@color/white" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:background="#00FFFFFF"
+                android:contentDescription="current date button"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                android:src="@drawable/ic_calender"
+                app:tint="@color/white" />
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/staticToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/barlow_semibold"
+                android:text="September"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="50dp"
+                android:src="@drawable/ic_round_arrow_right" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:src="@drawable/ic_round_arrow_left" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:background="@drawable/white_rounded_background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.30" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.67" />
+
+                <TextView
+                    android:id="@+id/expenses_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/barlow_semibold"
+                    android:text="Expenses"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="@+id/expenses_value"
+                    app:layout_constraintStart_toStartOf="@+id/expenses_value"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/borrow_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/barlow_semibold"
+                    android:text="Borrow"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="@+id/borrow_value"
+                    app:layout_constraintHorizontal_bias="0.71"
+                    app:layout_constraintStart_toStartOf="@+id/borrow_value"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/lend_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/barlow_semibold"
+                    android:text="Lend"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="@+id/lend_value"
+                    app:layout_constraintStart_toStartOf="@+id/lend_value"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/borrow_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_indian_rupee"
+                    android:drawableTint="@color/green"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="5000"
+                    android:textColor="@color/green"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline2"
+                    app:layout_constraintHorizontal_bias="0.51"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/borrow_text" />
+
+                <TextView
+                    android:id="@+id/expenses_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_indian_rupee"
+                    android:drawableTint="@android:color/holo_red_light"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="50000.00"
+                    android:textColor="@android:color/holo_red_light"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline3"
+                    app:layout_constraintStart_toStartOf="@+id/guideline2"
+                    app:layout_constraintTop_toBottomOf="@+id/expenses_text" />
+
+                <TextView
+                    android:id="@+id/lend_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_indian_rupee"
+                    android:drawableTint="@color/color_5"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="4060"
+                    android:textColor="@color/color_5"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/guideline3"
+                    app:layout_constraintTop_toBottomOf="@+id/lend_text" />
+
+                <ImageView
+                    android:id="@+id/borrow_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@+id/borrow_value"
+                    app:layout_constraintEnd_toStartOf="@+id/borrow_value"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/borrow_text"
+                    app:srcCompat="@drawable/ic_borrow_icon" />
+
+                <ImageView
+                    android:id="@+id/expance_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@+id/expenses_value"
+                    app:layout_constraintEnd_toStartOf="@+id/expenses_value"
+                    app:layout_constraintStart_toStartOf="@+id/guideline2"
+                    app:layout_constraintTop_toTopOf="@+id/expenses_text"
+                    app:srcCompat="@drawable/ic_expance_cion" />
+
+                <ImageView
+                    android:id="@+id/lend_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@+id/lend_value"
+                    app:layout_constraintEnd_toStartOf="@+id/lend_value"
+                    app:layout_constraintStart_toStartOf="@+id/guideline3"
+                    app:layout_constraintTop_toTopOf="@+id/lend_text"
+                    app:layout_constraintVertical_bias="0.625"
+                    app:srcCompat="@drawable/ic_lend_icon" />
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:elevation="1dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@android:color/darker_gray"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/expenses_value" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="Transaction Body"
+        android:fillViewport="true"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/transactions"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp"
+                android:clipToPadding="false"
+                android:nestedScrollingEnabled="false"
+                android:paddingBottom="50dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0"
+                tools:itemCount="10"
+                tools:listitem="@layout/item_transaction" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

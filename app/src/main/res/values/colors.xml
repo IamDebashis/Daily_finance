@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_1">#4FCCC4</color>
+    <color name="color_2">#A4EFEF</color>
+    <color name="color_3">#39656A</color>
+    <color name="color_4">#FE8C6C</color>
+    <color name="color_5">#FEAD6D</color>
+    <color name="color_6">#FED46D</color>
+    <color name="light_green">#2FB800</color>
+    <color name="green">#4CAF50</color>
+    <color name="gray">#FF848E98</color>
+    <color name="blue">#1f6feb</color>
+    <color name="red">@android:color/holo_red_light</color>
+    
+    <color name="color_set2_1">#28AB9C</color>
+    <color name="color_set2_2">#F0F9F7</color>
+    <color name="blueis_white">#F6F8FB</color>
+    <color name="color_set2_3">#9EE3D4</color>
+    <color name="color_set2_4">#CC5940</color>
+    <color name="color_set2_5">#4fcdc5</color>
+    <color name="color_set2_6">#FA8D44</color>
+    <color name="color_set2_7">#225157</color>
+
+
+
+    
+    
+    
+    
+    
+    
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>

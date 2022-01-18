@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/dashboardFragment"
+        android:title="@string/dashboard"
+        app:showAsAction="ifRoom"
+
+        android:icon="@drawable/ic_dashboard"/>
+
+    <item
+        android:id="@+id/transactionFragment"
+        android:title="@string/transaction"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_analyse"/>
+
+    <item
+        android:enabled="false"
+        android:title="mid" />
+
+
+    <item
+        android:id="@+id/lendAndBorowedFragment"
+        android:title="@string/debt"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_debt"
+        />
+
+    <item
+        android:id="@+id/settingFragment"
+        android:title="@string/config"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_config"/>
+
+</menu>
