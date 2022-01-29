@@ -26,20 +26,23 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
-                android:drawableEnd="@drawable/ic_round_arrow_down"
                 android:fontFamily="@font/nunito_bold"
                 android:text="September"
                 android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                app:drawableEndCompat="@drawable/ic_round_arrow_down" />
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cardView"
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/chartCard"
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
+                app:cardElevation="20dp"
+                android:clickable="true"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="70dp"
                 android:layout_marginEnd="24dp"
-                app:cardCornerRadius="20dp">
+                app:cardCornerRadius="20dp"
+                android:focusable="true">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -114,7 +117,7 @@
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
-            </androidx.cardview.widget.CardView>
+            </com.google.android.material.card.MaterialCardView>
 
             <LinearLayout
                 android:id="@+id/emi_card"

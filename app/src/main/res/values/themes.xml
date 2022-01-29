@@ -30,18 +30,26 @@
         <!-- Navigation bar color-->
         <item name="android:navigationBarColor">@color/white</item>
         <!-- Customize your theme here. -->
-        <item name="bottomSheetDialogTheme">@style/ThemeOverlay.AppCompat.ModelBottomSheetDialog</item>
+<!--        <item name="bottomSheetDialogTheme">@style/ThemeOverlay.AppCompat.ModelBottomSheetDialog</item>-->
 
     </style>
 
+
+
+
+
+
+
     <style name="ModelBottomSheet" parent="Widget.MaterialComponents.BottomSheet">
         <item name="shapeAppearance">@style/RounderShape</item>
+
 
     </style>
 
     <style name="ThemeOverlay.AppCompat.ModelBottomSheetDialog" parent="ThemeOverlay.MaterialComponents.BottomSheetDialog">
         <item name="bottomSheetStyle">@style/ModelBottomSheet</item>
-        <item name="theme">@style/Theme.DailyFinance</item>
+
+<!--        <item name="theme">@style/Theme.DailyFinance</item>-->
     </style>
 
 <style name="RounderShape" parent="ShapeAppearance.MaterialComponents.LargeComponent">
@@ -49,6 +57,5 @@
     <item name="cornerFamily">rounded</item>
 </style>
 
-    
-    
+
 </resources>

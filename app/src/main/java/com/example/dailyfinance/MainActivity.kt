@@ -7,6 +7,7 @@ import android.util.Log
 import android.view.View
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
+import com.example.dailyfinance.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
@@ -22,7 +23,11 @@ const val Choose_Fragment = "choose_fragment"
 class MainActivity : AppCompatActivity() {
 
     private val  TAG = "MainActivity"
-    private var FLOATING_ACTION_BUTTON_STATE = false
+    private var FLOATING_ACTION_BUTTON_STATE = true
+
+    private lateinit var layout: ActivityMainBinding
+
+
     private lateinit var mainActionButton: FloatingActionButton
     private lateinit var borrowrdActionButton: FloatingActionButton
     private lateinit var expenceActionButton: FloatingActionButton
@@ -30,17 +35,13 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-
-        val nav = findViewById<BottomNavigationView>(R.id.navigation_view)
-
-        Log.i(TAG, "onCreate: ${R.id.nav_hostController}")
-
+        layout = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(layout.root)
         val navHost = findNavController(R.id.nav_hostController)
 
-        nav.setupWithNavController(navHost)
+        layout.navigationView.setupWithNavController(navHost)
 
-        FLOATING_ACTION_BUTTON_STATE = false
+
 
         //Initial views
         initView()
@@ -51,10 +52,16 @@ class MainActivity : AppCompatActivity() {
 
 
 
-
+        layout.extendBg.setOnClickListener{
+           closeFABMenu()
+        }
         /*Visible or hide the extra add button */
         mainActionButton.setOnClickListener{
-          showOrHideAddButton()
+            if(FLOATING_ACTION_BUTTON_STATE){
+                showFABMenu()
+            }else{
+                closeFABMenu()
+            }
         }
 
     }
@@ -74,20 +81,29 @@ class MainActivity : AppCompatActivity() {
 
 
 
-    private fun showOrHideAddButton(){
+    /*********** show and hide Extend FB Button ******/
 
-        if(FLOATING_ACTION_BUTTON_STATE){
-            FLOATING_ACTION_BUTTON_STATE = false
-            borrowrdActionButton.visibility = View.GONE
-            landActionButton.visibility = View.GONE
-            expenceActionButton.visibility = View.GONE
-
-        }else{
-            FLOATING_ACTION_BUTTON_STATE = true
-            borrowrdActionButton.visibility = View.VISIBLE
-            landActionButton.visibility = View.VISIBLE
-            expenceActionButton.visibility = View.VISIBLE
-        }
+    fun closeFABMenu(){
+        FLOATING_ACTION_BUTTON_STATE = true
+        layout.mainActionButton.animate().rotation(0f)
+        layout.extendBg.visibility = View.GONE
+        layout.borrowedActionButton.visibility = View.GONE
+        layout.landActionButton.visibility = View.GONE
+        layout.expenceActionButton.visibility = View.GONE
+        layout.borrowedText.visibility = View.GONE
+        layout.lendText.visibility = View.GONE
+        layout.expenseText.visibility = View.GONE
+    }
+    fun showFABMenu(){
+        FLOATING_ACTION_BUTTON_STATE = false
+        layout.mainActionButton.animate().rotationBy(45f)
+        layout.extendBg.visibility = View.VISIBLE
+        layout.borrowedActionButton.visibility = View.VISIBLE
+        layout.landActionButton.visibility = View.VISIBLE
+        layout.expenceActionButton.visibility = View.VISIBLE
+        layout.borrowedText.visibility = View.VISIBLE
+        layout.lendText.visibility = View.VISIBLE
+        layout.expenseText.visibility = View.VISIBLE
     }
 
 
@@ -95,15 +111,15 @@ class MainActivity : AppCompatActivity() {
 
         borrowrdActionButton.setOnClickListener{
             addTransactionActivity(Borrow_Tag)
-            showOrHideAddButton()
+            closeFABMenu()
         }
         landActionButton.setOnClickListener{
             addTransactionActivity(Lend_Tag)
-            showOrHideAddButton()
+            closeFABMenu()
         }
         expenceActionButton.setOnClickListener {
             addTransactionActivity(Expense_Tag)
-            showOrHideAddButton()
+            closeFABMenu()
         }
 
 
