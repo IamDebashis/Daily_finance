@@ -7,7 +7,7 @@
     android:paddingBottom="15dp">
 
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/date_section"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -16,7 +16,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/date_day"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
@@ -28,7 +28,7 @@
             android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/textView7"
+            android:id="@+id/date_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
@@ -40,7 +40,7 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/person_name"
+        android:id="@+id/item_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -49,8 +49,8 @@
         android:text="Shooping"
         android:textColor="@color/black"
         android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/person_icon"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+        app:layout_constraintStart_toEndOf="@+id/item_icon"
+        app:layout_constraintTop_toBottomOf="@+id/date_section" />
 
     <TextView
         android:id="@+id/amount"
@@ -66,20 +66,20 @@
         android:textSize="16sp"
 
         app:drawableStartCompat="@drawable/ic_indian_rupee"
-        app:layout_constraintBottom_toBottomOf="@+id/person_name"
+        app:layout_constraintBottom_toBottomOf="@+id/item_title"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/person_name" />
+        app:layout_constraintTop_toTopOf="@+id/item_title" />
 
     <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/person_icon"
+        android:id="@+id/item_icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:background="@color/color_6"
         android:scaleType="centerInside"
         app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
-        app:layout_constraintBottom_toBottomOf="@+id/person_name"
+        app:layout_constraintBottom_toBottomOf="@+id/item_title"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/person_name"
+        app:layout_constraintTop_toTopOf="@+id/item_title"
         app:srcCompat="@drawable/ic_place_holder" />
 </androidx.constraintlayout.widget.ConstraintLayout>

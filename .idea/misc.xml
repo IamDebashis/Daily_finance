@@ -18,6 +18,7 @@
         <entry key="..\:/Android/Dailyfinance/app/src/main/res/drawable/ic_dashboard.xml" value="0.22552083333333334" />
         <entry key="..\:/Android/Dailyfinance/app/src/main/res/drawable/ic_debt.xml" value="0.22552083333333334" />
         <entry key="..\:/Android/Dailyfinance/app/src/main/res/drawable/ic_exclamation.xml" value="0.19953703703703704" />
+        <entry key="..\:/Android/Dailyfinance/app/src/main/res/drawable/ic_filled_heart.xml" value="0.19771689497716896" />
         <entry key="..\:/Android/Dailyfinance/app/src/main/res/drawable/ic_filter.xml" value="0.20046296296296295" />
         <entry key="..\:/Android/Dailyfinance/app/src/main/res/drawable/ic_galary.xml" value="0.20046296296296295" />
         <entry key="..\:/Android/Dailyfinance/app/src/main/res/drawable/ic_id_flag.xml" value="0.19953703703703704" />
@@ -25,6 +26,7 @@
         <entry key="..\:/Android/Dailyfinance/app/src/main/res/drawable/ic_lend_icon.xml" value="0.20046296296296295" />
         <entry key="..\:/Android/Dailyfinance/app/src/main/res/drawable/ic_money.xml" value="0.20046296296296295" />
         <entry key="..\:/Android/Dailyfinance/app/src/main/res/drawable/ic_note.xml" value="0.20046296296296295" />
+        <entry key="..\:/Android/Dailyfinance/app/src/main/res/drawable/ic_outline_heart.xml" value="0.19771689497716896" />
         <entry key="..\:/Android/Dailyfinance/app/src/main/res/drawable/ic_paid_amont.xml" value="0.20046296296296295" />
         <entry key="..\:/Android/Dailyfinance/app/src/main/res/drawable/ic_person.xml" value="0.19953703703703704" />
         <entry key="..\:/Android/Dailyfinance/app/src/main/res/drawable/ic_place_holder.xml" value="0.20046296296296295" />
@@ -79,8 +81,9 @@
         <entry key="..\:/Android/Dailyfinance/app/src/main/res/layout/fragment_transaction.xml" value="0.5" />
         <entry key="..\:/Android/Dailyfinance/app/src/main/res/layout/item_catagory_list.xml" value="0.33" />
         <entry key="..\:/Android/Dailyfinance/app/src/main/res/layout/item_category_list.xml" value="0.33" />
+        <entry key="..\:/Android/Dailyfinance/app/src/main/res/layout/item_chart_transaction.xml" value="0.33" />
         <entry key="..\:/Android/Dailyfinance/app/src/main/res/layout/item_emei_card_view.xml" value="0.25" />
-        <entry key="..\:/Android/Dailyfinance/app/src/main/res/layout/item_fragment_chart.xml" value="0.18611111111111112" />
+        <entry key="..\:/Android/Dailyfinance/app/src/main/res/layout/item_fragment_chart.xml" value="0.25" />
         <entry key="..\:/Android/Dailyfinance/app/src/main/res/layout/item_last_transaction_card.xml" value="0.33" />
         <entry key="..\:/Android/Dailyfinance/app/src/main/res/layout/item_lend_borrorw.xml" value="0.18611111111111112" />
         <entry key="..\:/Android/Dailyfinance/app/src/main/res/layout/item_transaction.xml" value="0.25" />

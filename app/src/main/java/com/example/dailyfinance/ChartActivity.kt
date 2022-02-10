@@ -17,11 +17,11 @@ class ChartActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_chart)
 
-        supportFragmentManager.commit {
+       /* supportFragmentManager.commit {
             replace(R.id.fragmentContainerView,ChartOverviewFragment())
             setReorderingAllowed(true)
         }
-
+*/
 
     }
 

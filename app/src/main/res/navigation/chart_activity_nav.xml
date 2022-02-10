@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/chart_activity_nav"
+    app:startDestination="@id/chartOverviewFragment">
+
+    <fragment
+        android:id="@+id/chartOverviewFragment"
+        android:name="com.example.dailyfinance.fragments.ChartOverviewFragment"
+        android:label="ChartOverviewFragment" >
+        <action
+            android:id="@+id/action_chartOverviewFragment_to_chartItemFragment2"
+            app:destination="@id/chartItemFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/chartItemFragment"
+        android:name="com.example.dailyfinance.fragments.ChartItemFragment"
+        android:label="ChartItemFragment" >
+        <action
+            android:id="@+id/action_chartItemFragment_to_chartOverviewFragment2"
+            app:destination="@id/chartOverviewFragment" />
+    </fragment>
+</navigation>
